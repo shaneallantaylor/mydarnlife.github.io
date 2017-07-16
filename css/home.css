@@ -49,9 +49,87 @@ nav a, nav a:visited {
 }
 
 .top-bar {
-  text-align: center;
+  text-align: left;
   height: 100%;
-  margin: 25px 0;
+  margin: 25px 10px;
+}
+
+#nav-icon {
+  width: 30px;
+  position: relative;
+  z-index: 1501;
+  display: inline-block;
+  float: right;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon span{
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #e1445e;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon.open span {
+  background: #fff;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon span:nth-child(2),#nav-icon span:nth-child(3) {
+  top: 10px;
+}
+
+#nav-icon span:nth-child(4) {
+  top: 20px;
+}
+
+#nav-icon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
 
 .title-container {
@@ -62,8 +140,8 @@ nav a, nav a:visited {
 }
 
 .site-title, .site-title a {
-  font-size: 30px;
-  padding: 22px;
+  font-size: 16px;
+  padding: 0;
   margin: 0;
   font-weight: 300;
   color: #fff;
@@ -87,6 +165,93 @@ nav a, nav a:visited {
 .red-underline {
   text-decoration: underline;
   color: #e1445e;
+}
+
+body nav.top-nav.open {
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+    height: 100%;
+}
+
+body nav.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 0;
+  height: 0;
+  color: #fff;
+  padding-top: 0px;
+  background: none;
+  z-index: 1000;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -moz-transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+  -o-transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+  transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+
+body nav.top-nav .nav-background {
+    z-index: 1500;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: none;
+    display: table;
+    background: rgba(225, 68, 94, 0.92);
+    -moz-transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+
+body nav.top-nav.open ul {
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0;
+  -moz-transform: perspective(600px) rotateX(0deg);
+  -webkit-transform: perspective(600px) rotateX(0deg);
+  transform: perspective(600px) rotateX(0deg);
+}
+
+body nav.top-nav ul {
+  visibility: hidden;
+  top: -10%;
+  width: 100%;
+  padding: 0;
+  opacity: 0;
+  display: table-cell;
+  vertical-align: middle;
+  -moz-transform: perspective(600px) rotateX(10deg);
+  -webkit-transform: perspective(600px) rotateX(10deg);
+  transform: perspective(600px) rotateX(10deg);
+  -moz-transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+  -o-transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+  -webkit-transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+
+nav.top-nav ul li {
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  line-height: 35px;
+}
+
+nav.top-nav ul li a {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 23px;
+  font-family: "open sans";
+  vertical-align: super;
+  text-transform: none;
 }
 
 .brand-container {
@@ -178,6 +343,16 @@ nav a, nav a:visited {
 }
 
 @media (min-width: 768px) {
+
+
+  .site-title, .site-title a {
+    font-size: 30px;
+    padding: 22px;
+  }
+
+  .top-bar {
+    text-align: center;
+  }
 
   .screenplays {
     justify-content: space-around;
