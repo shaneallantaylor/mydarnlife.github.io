@@ -160,6 +160,7 @@ nav a, nav a:visited {
 .page-title.screenplays-title h2 {
   font-size: 30px;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .red-underline {
@@ -319,6 +320,13 @@ nav.top-nav ul li a {
   margin: 10px auto 20px;
 }
 
+.screenplays-item h5 {
+  color: #fff;
+  font-size: 16px;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
 .screenplays-item p {
   color: #fff;
 }
@@ -364,6 +372,7 @@ nav.top-nav ul li a {
     width: 100%;
     justify-content: center;
     max-width: 330px;
+    border: none;
   }
 
   .more.button {
@@ -390,8 +399,14 @@ nav.top-nav ul li a {
     font-size: 40px;
   }
 
+  .screenplays {
+    max-width: 1190px;
+    margin: 0 auto;
+  }
+
   .screenplays-item {
     align-items: center;
     border-bottom: 0;
+    max-width: 400px;
   }
 }
