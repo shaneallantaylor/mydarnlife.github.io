@@ -19,33 +19,28 @@ header {
 }
 
 nav {
-  position: fixed;
-  bottom: -60px;
-  width: 100%;
-  background-color: rgba(39, 39, 39, 0.85);
-  transition: bottom 0.5s ease;
-}
-
-nav.open {
-  bottom: 0;
+  position: absolute;
+  right: 40px;
+  top: 140px;
 }
 
 nav ul {
-  display: flex;
   padding: 0;
-  justify-content: center;
 }
 
 nav ul li {
-  display: inline-block;
+  list-style: none;
+  padding: 10px 0;
 }
+
 nav a, nav a:visited {
-  padding: 7px 13px;
-  background-color: rgb(39, 39, 39);
-  border-radius: 6px;
-  border: 1px solid #e1445e;
   color: #fff;
-  text-transform: lowercase;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e1445e;
 }
 
 .top-bar {
