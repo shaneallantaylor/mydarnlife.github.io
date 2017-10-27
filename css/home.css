@@ -18,11 +18,11 @@ header {
   width: 100%;
 }
 
-nav {
+/*nav {
   position: absolute;
   right: 40px;
   top: 140px;
-}
+}*/
 
 nav ul {
   padding: 0;
@@ -41,6 +41,36 @@ nav a, nav a:visited {
 
 nav a:hover {
   color: #e1445e;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: [col1-start] auto [col1-end col2-start] 1120px [col2-end col3-start] auto [col3-end];
+  grid-template-rows: [row1-start header-start] 110px [row1-end header-end row2-start] 250px [row2-end row3-start] 250px [row3-end row4-start] 250px [row4-end row5-start] auto;
+}
+
+header {
+  /*background: yellow;*/
+  grid-area: header;
+  grid-column: col1-start / col3-end;
+  grid-row: header-start / header-end;
+}
+
+.phases {
+  /*background: red;*/
+  grid-area: content;
+  grid-column: col2-start / col2-end;
+  grid-row: row2-start / row4-end;
+}
+
+.phase-row2 .phase-item img {
+  max-width: 190px;
+}
+
+nav {
+  /*background: blue;*/
+  grid-column: col3-start / col3-end;
+  grid-row: row2-start / last;
 }
 
 .top-bar {
