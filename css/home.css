@@ -6,7 +6,6 @@
 body {
   position: relative;
   background-color: #272727;
-  /*padding-bottom: 60px;*/
 }
 
 a, a:visited, a:hover {
@@ -17,12 +16,6 @@ a, a:visited, a:hover {
 header {
   width: 100%;
 }
-
-/*nav {
-  position: absolute;
-  right: 40px;
-  top: 140px;
-}*/
 
 nav ul {
   padding: 0;
@@ -55,7 +48,6 @@ nav a:hover {
 }
 
 header {
-  /*background: yellow;*/
   grid-area: header;
   grid-column: col1-start / col3-end;
   grid-row: header-start / header-end;
@@ -68,7 +60,6 @@ header .title-container {
 }
 
 .phases {
-  /*background: red;*/
   grid-area: content;
   grid-column: col2-start / col2-end;
   grid-row: row2-start / row4-end;
@@ -79,13 +70,11 @@ header .title-container {
 }
 
 nav {
-  /*background: blue;*/
   grid-column: col1-start / col3-end;
   grid-row: row5-start / row5-end;
 }
 
 footer {
-  /*background: blue;*/
   grid-column: col1-start / col3-end;
   grid-row: row6-start / end;
   text-align: center;
@@ -184,7 +173,6 @@ footer {
   margin: 0;
   font-weight: 300;
   color: #fff;
-  cursor: default;
   -ms-transform: skewY(-3deg);
   -webkit-transform: skewY(-3deg);
   transform: skewY(-3deg);
