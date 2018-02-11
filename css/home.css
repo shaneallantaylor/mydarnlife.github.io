@@ -168,6 +168,22 @@ footer {
   height: 100%;
 }
 
+.slug-container {
+  font-family: 'rocksalt';
+  height: 100%;
+}
+
+.slug-container .site-slug {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  color: #e1455d;
+  -ms-transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  transform: skewY(-3deg);
+}
+
 .site-title, .site-title a {
   font-size: 26px;
   padding: 0;
@@ -398,7 +414,7 @@ article.content ul {
 
   .site-title, .site-title a {
     font-size: 30px;
-    padding: 22px;
+    padding: 22px 22px 0;
   }
 
   .top-bar {
