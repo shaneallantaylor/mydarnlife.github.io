@@ -42,16 +42,10 @@ nav a:hover {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: [col1-start] 1fr [col1-end col2-start] auto [col2-end col3-start] 1fr [col3-end];
-  /*grid-template-rows: [row1-start header-start] 110px [row1-end header-end row2-start] auto [row2-end row3-start] auto [row3-end row4-start] auto [row4-end row5-start] auto [row5-end row6-start] auto;*/
-  grid-template-rows: [row1-start header-start] auto [row1-end header-end row2-start] auto [row2-end row3-start] auto [row3-end row4-start] auto [row4-end row5-start] auto [row5-end row6-start] auto;
+
 }
 
 header {
-  grid-area: header;
-  grid-column: col2-start / col2-end;
-  grid-row: header-start / header-end;
   text-align: center;
 }
 
@@ -60,10 +54,13 @@ header .title-container {
   margin: 25px 10px;
 }
 
+.goback a {
+  font-family: 'rocksalt';
+  color: #e1455d;
+}
+
 .phases {
-  grid-area: content;
-  grid-column: col2-start / col2-end;
-  grid-row: row2-start / row4-end;
+
 }
 
 .phase-row2 .phase-item img {
@@ -71,13 +68,11 @@ header .title-container {
 }
 
 nav {
-  grid-column: col1-start / col3-end;
-  grid-row: row5-start / row5-end;
+
 }
 
 footer {
-  grid-column: col2-start / col2-end;
-  grid-row: row6-start / end;
+
   text-align: center;
   font-size: 8px;
   color: white;
@@ -398,8 +393,6 @@ nav.top-nav ul li a {
 
 article.content {
   color: #fff;
-  grid-column: col2-start / col2-end;
-  grid-row: row2-start / row2-end;
   text-align: center;
 }
 
@@ -477,7 +470,7 @@ article.content ul {
 
 @media (min-width: 1200px) {
   .grid-container {
-    grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1120px [col2-end col3-start] 1fr [col3-end];
+
   }
 
   .phase-item {
@@ -485,12 +478,11 @@ article.content ul {
   }
 
   nav {
-    grid-column: col3-start / col3-end;
-    grid-row: row1-start / last;
+
   }
 
   nav ul {
-    text-align: left;
+
   }
 
   nav ul li {
