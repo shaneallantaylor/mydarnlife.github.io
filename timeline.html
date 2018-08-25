@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
-
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
   <body>
@@ -32,14 +33,15 @@
             <li><a href="#">My Darn Job</a></li>
             <li><a href="#">Links</a></li>
             <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li><a h20="#">Instagram</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Credits</a></li>
           </ul>
         </nav>
       </header>
       <article class="content">
-        <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1_yCArGV6oN2bcOutzY1lYyKHTW-ahseaa-QbcppeuSY&font=Default&lang=en&initial_zoom=2&height=350' width='100%' height='350' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+        <div id='timeline-embed' style="width: 100%; height: 600px;"></div>
+        <!-- <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1_yCArGV6oN2bcOutzY1lYyKHTW-ahseaa-QbcppeuSY&font=Default&lang=en&initial_zoom=2&height=350' width='100%' height='350' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe> -->
       </article>
       <footer>
         <span>© Laurence Newnam</span>
@@ -49,5 +51,12 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+          <script type="text/javascript">
+            var additionalOptions = {
+              height: 50
+            }
+              timeline = new TL.Timeline('timeline-embed',
+          'https://docs.google.com/spreadsheets/d/1_yCArGV6oN2bcOutzY1lYyKHTW-ahseaa-QbcppeuSY/pubhtml', additionalOptions);
+          </script>
   </body>
 </html>
