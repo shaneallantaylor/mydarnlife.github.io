@@ -395,10 +395,20 @@ article.content {
   text-align: center;
 }
 
+article.content p {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
 article.content ul {
   padding: 0;
   list-style: none;
   font-size: 20px;
+}
+
+article.content ul a, article.content ul a:visited {
+  text-decoration: underline;
+  color: #e1455d;
 }
 
 /* CircleSpeak page */
