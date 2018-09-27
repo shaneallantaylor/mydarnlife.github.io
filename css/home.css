@@ -381,6 +381,10 @@ nav.top-nav ul li a {
   padding: 20px 0 30px;
 }
 
+.more.button.disabled {
+  cursor: not-allowed;
+}
+
 .more.button a {
   color: white;
   background: #e1445e;
@@ -390,13 +394,21 @@ nav.top-nav ul li a {
   font-size: 18px;
 }
 
+.more.button.disabled a {
+  background: #b95566;
+  color: #e4e4e4;
+  touch-action: manipulation;
+  user-select: none;
+  pointer-events: none;
+}
+
 article.content {
   color: #fff;
   text-align: center;
 }
 
 article.content p {
-  margin: 0 auto;
+  margin: 0 auto 10px;
   max-width: 800px;
 }
 
